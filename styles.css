@@ -1,0 +1,255 @@
+
+* { box-sizing: border-box; }
+body { margin: 0 auto;  font: 16px Noto serif; color: #111; }
+/* Cabecera y pie*/
+header { background: #080e80; color: white; display: flex; font-family: montserrat; align-items: center; justify-content: space-between; gap: 20px; margin: 0 auto;  padding-left: 8%;
+  padding-right: 19%;}
+  header ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  }
+
+header ul li a {
+  color: white;
+  text-decoration: none;
+}
+footer { background: #080e80; color: white;  font-family: montserrat;  display: flex; align-items: center; height: 10em;  padding-left: 8%;
+  padding-right: 19%; font-size: 13px;}
+footer p{font-size: 1.3em; position: relative; left: 3em;}
+.redes{position: relative; left: 45em;}
+.iconos_redes{font-size: 3em; display: flex; list-style: none; gap: 15px; padding: 0; margin: 0;}
+.cabeza_a {font-size: 20px; padding: 3em; }
+.logo { color: white; font-weight: bold; border-radius: 40%; width: 10em;  }
+.logo_footer { color: white; font-weight: bold; border-radius: 40%; width: 9em;  }
+nav { display: flex; gap: 16px; }
+nav a, footer a { color: white; text-decoration: none; }
+.banner { margin: 0; padding: 30px; background-image: url(imagenes/ruedas.jpg); background-repeat: no-repeat;  background-position: center; background-size: cover;  color: #ffffff; text-shadow: 3px 2px 12px rgba(0,0,0,1.00); font-family: Noto serif;  text-align: center; font-size: 2em; text-transform: uppercase; height: 8em; }
+
+section h2 { text-align: center; font-size: 2em; position: relative; font-weight: normal; color: #080e80;}
+
+/*Introduccion*/
+.intro { max-width: 1500px; min-height: 420px; margin: 40px auto; padding: 24px; display: flex; align-items: center; gap: 24px; background: #fff; border-radius: 12px; box-shadow: 0 8px 28px #00000012; }
+.imagen-intro { flex: 0 0 34%; height: 370px; }
+.imagen-intro img { display: block; width: 100%; height: 100%; object-fit: cover; border-radius: 8px; }
+.texto-intro { flex: 1; }
+.texto-intro h2 { margin: 0 0 10px; color: #080e80; font-size: clamp(1.6rem, 2.5vw, 2.5rem); }
+.texto-intro p { max-width: none; margin: 0; font-size: clamp(1rem, 1.3vw, 1.35rem); line-height: 1.4; }
+
+
+
+
+
+/* Carrusel y tarjetas de productos */
+#titulo_carrusel{font-size: 2.6em; bottom: 10px;}
+.carousel-wrap { width: 54em; margin: 2rem auto; }
+#productosCarousel img { width: 100px; height: 30em; object-fit: cover; background: #f3f3f3;}
+.fondo{background-image: linear-gradient(rgba(13, 65, 89, 0.625)), url(imagenes/taller.jpeg); background-repeat: no-repeat; background-position: center; background-size: cover; }
+#titulo_prod{color: #f7f7f7; font-size: 2.6em;}
+.productos { width: 1000px; }
+.productos .card { height: 100%; width: 20em; padding: 4em; text-align: center; box-shadow: 10px 10px 8px -3px rgba(0,0,0,0.74);}
+.productos .card-img-top { height: 190px; object-fit: contain; padding: 10px; }
+.productos .btn { background-color: #080e80; border-color: #080e80; width: 11em; left: 0.2em; border-radius: 2em; position: relative;}
+
+/* Tarjetas de los servicios*/
+.fondo_servicios{background-image: linear-gradient(rgb(255, 255, 255), rgba(102, 103, 107, 0.345));   }
+#titulo_servicios{color: #444343; font-size: 2.6em; padding: 0.5em;}
+.servicios { width: 100em; height: 43em; }
+.servicios .card { height: 100%; width: 25em; box-shadow: 8px 1px 13px 7px rgba(0,0,0,0.74); text-align: center; }
+.servicios .card-img-top { height: 20em; object-fit: cover;   }
+.servicios .btn { background-color: #080e80; border-color: #080e80; width: 11em; left: 6.8em; border-radius: 2em; position: relative; top: -1em; bottom: -1em; padding: 0.8em;}
+
+
+.menu-toggle {
+  display: none;
+  width: 44px;
+  height: 44px;
+  border: 1px solid #ffffff80;
+  border-radius: 6px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  margin: 4px auto;
+  background: white;
+}
+
+.menu-toggle { display: none; }
+
+@media (max-width: 900px) {
+  body { overflow-x: hidden; }
+  img { max-width: 100%; }
+  .carousel-wrap {
+    width: min(calc(100% - 32px), 864px);
+    margin-inline: auto;
+  }
+  #productosCarousel img {
+    display: block;
+    width: 100%;
+    height: clamp(220px, 34vw, 420px);
+    object-fit: cover;
+  }
+  .productos, .servicios {
+    width: min(calc(100% - 32px), 1200px);
+    max-width: 100%;
+    height: auto;
+    margin-inline: auto;
+    padding: 24px 12px;
+  }
+  .productos .card, .servicios .card {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    padding: 1rem;
+  }
+  .productos .card-img-top, .servicios .card-img-top {
+    width: 100%;
+    max-width: 100%;
+    height: clamp(160px, 22vw, 280px);
+    padding: 10px;
+    object-fit: contain;
+  }
+  .servicios .card-img-top { object-fit: cover; padding: 0; }
+  .productos .btn, .servicios .btn {
+    position: static;
+    display: block;
+    width: min(100% - 24px, 220px);
+    margin: 0 auto 12px;
+  }
+  #card-body-productos,
+  #card-body-productos-camioneta,
+  #card-body-productos-minero {
+    position: static !important;
+    left: auto !important;
+  }
+  #titulo_carrusel, #titulo_prod, #titulo_servicios {
+    font-size: clamp(1.5rem, 3vw, 2.3rem);
+  }
+  footer {
+    height: auto;
+    min-height: 10rem;
+    padding: 1.5rem clamp(16px, 5vw, 72px);
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  footer p { position: static; margin: 0; font-size: 1rem; }
+  footer .redes{position: static; left:auto;}
+  .logo_footer { width: clamp(88px, 10vw, 140px); }
+}
+
+@media (max-width: 900px) {
+  header {
+    position: relative;
+    flex-wrap: wrap;
+    padding: 12px 20px;
+  }
+  .menu-toggle {
+    display: block;
+    order: 2;
+    margin-left: auto;
+  }
+  header nav {
+    display: none;
+    order: 3;
+    flex: 0 0 100%;
+    width: 100%;
+    margin: 0;
+    padding: .35rem 0;
+    background: #080e80;
+  }
+  header nav.menu-open { display: block; }
+  header nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+  }
+  header nav a {
+    display: block;
+    width: 100%;
+    padding: .85rem 1rem;
+    border-top: 1px solid #ffffff30;
+    font-size: 1rem;
+    text-align: left;
+  }
+  .menu-toggle:focus-visible, header nav a:focus-visible {
+    outline: 3px solid #b9e6ff;
+    outline-offset: 2px;
+  }
+}
+
+@media (max-width: 650px) {
+  .logo { width: 96px; }
+  header { padding: 10px 14px; gap: 10px; }
+  .menu-toggle { width: 42px; height: 42px; padding: 7px; }
+  .menu-toggle span { width: 20px; margin: 4px auto; }
+
+  .banner {
+    min-height: 180px;
+    height: auto;
+    padding: 34px 16px;
+    background-position: center;
+    background-size: cover;
+  }
+  .banner .ban {
+    margin: 0;
+    font-size: clamp(1.35rem, 6vw, 2rem);
+    line-height: 1.25;
+  }
+
+  .intro {
+    width: calc(100% - 24px);
+    min-height: 0;
+    margin: 18px auto 26px;
+    padding: 14px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+  }
+  .imagen-intro { flex: none; width: 100%; height: 210px; }
+  .imagen-intro img { width: 100%; height: 100%; }
+  .texto-intro h2 { margin-bottom: 8px; font-size: 1.4rem; line-height: 1.3; }
+  .texto-intro p { font-size: .98rem; line-height: 1.6; }
+
+  .carousel-wrap {
+    width: calc(100% - 24px);
+    margin: 1.5rem auto 2rem;
+  }
+  #titulo_carrusel { margin-bottom: .75rem; font-size: 1.45rem; }
+  #productosCarousel img { height: 220px; }
+  .carousel-indicators { margin-bottom: .5rem; }
+
+  .productos, .servicios {
+    width: 100%;
+    padding: 18px 12px;
+  }
+  #titulo_prod, #titulo_servicios {
+    margin-bottom: 1rem !important;
+    padding: .5rem 0;
+    font-size: 1.5rem;
+    line-height: 1.3;
+  }
+  .productos .card, .servicios .card { padding: .75rem; }
+  .productos .card-img-top, .servicios .card-img-top { height: 170px; }
+  .productos .card-body, .servicios .card-body { padding: .8rem .5rem; }
+  .productos .card-title, .servicios .card-title { font-size: 1rem; line-height: 1.35; }
+  .productos .btn, .servicios .btn { margin-bottom: 8px; }
+  footer { flex-direction: column; text-align: center; }
+  .iconos_redes { font-size: 2rem; }
+}
+
+@media (max-width: 380px) {
+  .banner .ban { font-size: 1.3rem; }
+  .intro { width: calc(100% - 16px); padding: 12px; }
+  .imagen-intro { height: 180px; }
+  #productosCarousel img { height: 185px; }
+  .productos .card-title, .servicios .card-title { font-size: .92rem; }
+}
